@@ -1,0 +1,314 @@
+if hasArgs:
+    cls()
+    for ua in U_ARGS:
+        if fileExists(ua) and isFile(ua):
+            fm.addFile(ua)
+
+if fm.hasFile():
+    print("\n")
+    for file in fm.getFiles().values():
+        print("\tFile: {}\n\t\tName: {}\n\t\tTrue File: {}\n\t\tHome: {}".format(
+            file.getName(), file.getName(True), file.isFile(), file.getAbsolutePath()))
+        if file.getExt():
+            print("\t\tExtension: {}\n".format(file.getExt()))
+        else:
+            print("\n")
+    print("\n")
+
+-------------------------------------------------------------------------------
+
+
+
+def heap():
+    if hasArgs:
+        if argLen > 1:
+            read(U_ARGS)
+            heapify(U_ARGS)
+            print("\n\t\tHeaped:\t{}\n\n".format(U_ARGS))
+
+        else:
+            print("\n\t{}\n".format(custom(U_ARGS)))
+    else:
+        print("\n\t\t{}\n\n".format(success("Howdy howdy howdy Hey")))
+
+
+def graph():
+    print("\n\n\t\t\t\t{}\n{}\n\n\n".format("python graphs".title(), LINE))
+    print("{}\n\n\n".format(GRAPH))
+    
+-------------------------------------------------------------------------------
+GRAPH = {"pennsylvania": ["erie", "phoenixville"],
+         "virginia": ["monroe", "bedford"],
+         "delaware": ["rehobeth", "dover"],
+         "new york": ["manhattan"],
+         "texas": ["arlington"]
+         }
+         
+-------------------------------------------------------------------------------
+print("\n\tDomain:\t{}\n\tImage:\t{}".format(domain, image_src))
+
+                if image_src[0].startswith("http"):
+                    image_link = image_src[0]
+                else:
+                    image_link = "{}{}".format(domain[0], image_src[0])
+
+                print("\tImage Link:\t{}".format(image_link))
+
+                image_file_name = image_link.split('/')[-1]
+
+                print("\tImage File Name:\t{}\n".format(image_file_name))
+                show_headers(image_link)
+
+                this.download_thread(image_link)
+-------------------------------------------------------------------------------
+
+page = requests.get(this.url)
+domain_list = this.url.rsplit('/', 1)
+domain = domain_list[0]
+extracted_html = html.fromstring(page.content)
+extracted_fragments = html.fragments_fromstring(page.content)
+tree = etree.fromstring(page.content)
+body_children = extracted_html.body[0].getchildren()
+image_src = extracted_html.xpath("//img/@src")
+h1 = extracted_html.xpath("//h1")
+h1_text = extracted_html.xpath("//h1/text()")
+root_doc = extracted_html.xpath("//html")
+element_list = extracted_html.xpath("//*")
+-------------------------------------------------------------------------------
+
+.	<Element html at 0x7f0f4e8333b0>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.	<Element head at 0x7f0f4e83e400>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.	<Element title at 0x7f0f4e83e450>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.	<Element body at 0x7f0f4e83e630>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.	<Element center at 0x7f0f4e83e680>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.	<Element h1 at 0x7f0f4e83e270>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.	<Element div at 0x7f0f4e83e220>
+		['__bool__', '__class__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_init', 'addnext', 'addprevious', 'append', 'attrib', 'base', 'base_url', 'body', 'classes', 'clear', 'cssselect', 'drop_tag', 'drop_tree', 'extend', 'find', 'find_class', 'find_rel_links', 'findall', 'findtext', 'forms', 'get', 'get_element_by_id', 'getchildren', 'getiterator', 'getnext', 'getparent', 'getprevious', 'getroottree', 'head', 'index', 'insert', 'items', 'iter', 'iterancestors', 'iterchildren', 'iterdescendants', 'iterfind', 'iterlinks', 'itersiblings', 'itertext', 'keys', 'label', 'make_links_absolute', 'makeelement', 'nsmap', 'prefix', 'remove', 'replace', 'resolve_base_href', 'rewrite_links', 'set', 'sourceline', 'tag', 'tail', 'text', 'text_content', 'values', 'xpath']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+def get_and_download_media_file(url=None):
+
+    if url:
+        # create video object
+        media = pafy.new(url)
+        # extract information about best resolution video available
+        bestResolutionVideo = media.getbest()
+        # download the video
+        bestResolutionVideo.download()
+
+
+def download_meta(url=None):
+    if len(url.strip()) > 0:
+        props = []
+
+        if not url.startswith('http://') and not url.startswith('https://'):
+            url = "https://www.youtube.com/watch?v={}".format(url)
+
+        meta = pafy.new(url)
+        for i, m in enumerate(dir(meta)):
+            props.append(m)
+
+        print('{} properties:\t{}'.format(url, props))
+
+        return {
+            'status': True,
+            'properties': props
+        }
+
+-------------------------------------------------------------------------------
+
+  
+
+    def create_scraper(this):
+        this.content = Frame(this)
+        this.content.grid(column=1, row=1, columnspan=4)
+
+        this.search_entry_var = tk.StringVar()
+
+        this.search_frame = tk.LabelFrame(
+            this.content, text=this.__search_frame_title.upper())
+
+        this.search_entry = Entry(this.search_frame, xscrollcommand=this.h_scroller.set,
+                                  width=58, textvariable=this.search_entry_var, font=(
+                                      "Helvetica", 12, 'normal'))
+        this.search_entry.focus()
+
+        this.search_button = Button(this.search_frame, text="scrape".title(),
+                                    font=("Helvetica", 12, 'bold'))
+        be(this.search_button, 'ButtonRelease', this.search_button_handler)
+        be(this.search_button, 'KeyRelease', this.button_keyrelease_handler)
+
+    def build_interface(this):
+        this.search_frame.grid(padx=6, pady=2, column=1, row=1)
+        # Textfield
+        this.search_entry.grid(ipady=5, pady=5, padx=5, column=1, row=1)
+        # Button
+        this.search_button.grid(padx=5, ipady=1, column=2, row=1)
+
+    def create_gui(this):
+        this.build_interface()
+        this.mainloop()
+
+    def search_button_handler(this, event):
+        search_term = this.search_entry_var.get()
+
+        if search_term:
+            this.scraper.set_url(search_term)
+            this.scrape_results = this.scraper.scrape_file()
+            this.show_results_thread()
+
+    def button_keyrelease_handler(this, event):
+        try:
+            if event.keysym == 'space' or event.keycode == 65:
+                search_term = this.search_entry_var.get()
+
+            if search_term:
+                this.scraper.set_url(search_term)
+                this.scrape_results = this.scraper.scrape_file()
+                this.show_results_thread()
+        except UnboundLocalError as ule:
+            return
+
+    def show_results_thread(this):
+        results_thread = Thread(target=this.show_results, args=())
+        results_thread.start()
+        results_thread = None
+
+    def show_results(this):
+        spin_textvar = StringVar()
+        lbl_title_var = StringVar()
+
+        if this.scrape_results:
+            if not this.scrape_results['status']:
+                error = this.scrape_results['error']
+                function = dms['error']
+                return function('error'.title(), error)
+
+            frame = Frame(this.parent)
+            frame.grid(column=1, row=2, ipady=10)
+
+            control_frame = Frame(frame)
+            control_frame.grid(column=1, columnspan=4, row=4, pady=10, padx=10)
+
+            def remove_frame(event):
+                frame.destroy()
+
+            button_remove = Button(control_frame, text="Destroy",
+                                   font=("Helvetica", 12, 'bold'))
+            button_remove.grid(column=1, row=1, ipady=5, ipadx=5)
+            button_remove.bind('<ButtonRelease>', remove_frame)
+
+            lbl_title = Label(frame, textvariable=lbl_title_var, font=(
+                "Helvetica", 15, 'bold'))
+            lbl_title.grid(column=1, row=1, padx=5)
+
+            elements = this.scrape_results['element_tags']
+
+            def spin_handler():
+                selection = spin_textvar.get()
+                elements_kv = this.scrape_results['element_tags_kv']
+                element_text = elements_kv[selection.strip()]
+
+                print("{}'s Text: {}".format(selection, element_text))
+
+            spin = Spinbox(frame, values=elements, state=['readonly'], fg='#000', bg='#fff', disabledbackground='#fff', activebackground='#eeeeeeeee',
+                           textvariable=spin_textvar, width=30, font=("Helvetica", 15, 'normal'), command=spin_handler)
+            spin.grid(column=2, row=1, ipady=8, ipadx=5, padx=5)
+
+            _tags = None
+
+            if len(this.scrape_results) >= 0:
+                _tags = "{} tags".format(len(this.scrape_results))
+            else:
+                _tags = "{} tag".format(len(this.scrape_results))
+
+            lbl_title_var.set("{}".format(_tags.title()))
+
+            this.parent.update()
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
